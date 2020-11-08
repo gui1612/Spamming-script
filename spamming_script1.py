@@ -21,8 +21,8 @@ def regular_spam(msg, delay):
     Automates de keyboard presses of the current value followed by the inputed 
     msg value and also sets a delay between consequent message
     """
-    typewrite(format_time() + msg + '\n')
-    # typewrite(msg + '\n')                    #uncomment if you want the spam message without date and time
+    # typewrite(format_time() + msg + '\n')
+    typewrite(msg + '\n')                    #uncomment if you want the spam message without date and time
     sleep(delay)
 
 
@@ -40,7 +40,7 @@ if choice.lower() == "instant":
     
     
 if choice.lower() == "regular":
-    n = int(input("How many times do you want the message to repeat?: "))
+    n = int(input("How many times do you want the message to repeat?: ")) 
     sleep(5)
     for i in range(0, n):
         regular_spam(msg, delay)
@@ -50,4 +50,5 @@ if choice.lower() == "infinite":
     sleep(5)
     while True:
         regular_spam(msg, delay)
-   
+        
+
